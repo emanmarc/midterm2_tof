@@ -9,16 +9,18 @@
 class PmodToF {
 public:
     PmodToF(I2cCore& i2c); // Constructor
-    bool initialize();     // Initialization
-    double getDistance();  // Get distance measurement
+    ~PmodToF();
+
+    bool initialize();
+    double getDistance();
 
 private:
     I2cCore& i2cInterface;
 
-    // functions for register read/write
+    // functions for register read/write using i2c
     bool writeRegister(uint8_t reg, uint8_t value);
     bool readRegister(uint8_t reg, uint8_t& value);
-    bool readRegisters(uint8_t reg, uint8_t* data, uint8_t length);
+
 };
 
 #endif // PMODTOF_H
