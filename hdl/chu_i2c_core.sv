@@ -12,8 +12,8 @@ module chu_i2c_core
     // external signal    
     output tri scl,
     inout  tri sda,
-    output logic tof_ss,     // Sample Start (SS) signal
-    input  logic tof_irq     // Interrupt Request (IRQ) signal 
+    output logic tof_ss,     // Pmod tof Sample Start (SS) signal
+    input  logic tof_irq     // Pmod tof Interrupt Request (IRQ) signal 
    );
 
    // signal declaration
